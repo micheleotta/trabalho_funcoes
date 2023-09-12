@@ -3,30 +3,43 @@ def funcao_f(x):
   return x + 1
 
 
-#FUNCAO g(X) = X - 5
+# FUNCAO g(X) = X - 5
 def funcao_g(x):
   return x - 5
 
 
-def gf(x):
-  return funcao_g(funcao_f(x))
+def gf():
+  return funcao_g(funcao_f(valor_de_x))
 
 
-def gg(x):
-  return funcao_g(funcao_g(x))
+def gg():
+  return funcao_g(funcao_g(valor_de_x))
 
 
-def ff(x):
-  return funcao_f(funcao_f(x))
+def ff():
+  return funcao_f(funcao_f(valor_de_x))
 
 
-def fg(x):
-  return funcao_f(funcao_g(x))
+def fg():
+  return funcao_f(funcao_g(valor_de_x))
 
 
-valor_de_x = int(input("Insira um valor: "))
+operacoes = 1
+contador = 0
+while operacoes != 2:
+  operacoes = int(input("\n\nSelecione a opção: \n1 - Fazer operações com função \n2 - Sair\n"))
 
-print(f"\n\ng ° f({valor_de_x}) = {gf(valor_de_x)}\n")
-print(f"g ° g({valor_de_x}) = {gg(valor_de_x)}\n")
-print(f"f ° f({valor_de_x}) = {ff(valor_de_x)}\n")
-print(f"f ° g({valor_de_x}) = {fg(valor_de_x)}\n")
+  if operacoes == 1:
+    #f = int(input("Insira a função f(x) = "))
+    #g = int(input("Insira a função g(x) = "))
+
+    
+    valor_de_x = int(input("Insira um valor: "))
+    
+    print(f"\n\ng ° f({valor_de_x}) = {gf()}")
+    print(f"g ° g({valor_de_x}) = {gg()}")
+    print(f"f ° f({valor_de_x}) = {ff()}")
+    print(f"f ° g({valor_de_x}) = {fg()}")
+    
+  elif operacoes != 1 and operacoes != 2:
+    print("\nOpção inválida!")
