@@ -1,3 +1,5 @@
+# VERSÃO ONDE O USUÁRIO DEFINE AS FUNÇÕES
+
 def gf():
   return funcao_g(funcao_f(valor_de_x))
 
